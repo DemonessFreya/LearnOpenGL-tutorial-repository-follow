@@ -1,0 +1,4 @@
+C:/OpenGL/build/CMakeFiles/main.dir
+C:/OpenGL/build/CMakeFiles/GLAD.dir
+C:/OpenGL/build/CMakeFiles/edit_cache.dir
+C:/OpenGL/build/CMakeFiles/rebuild_cache.dir

@@ -186,7 +186,7 @@ int main()
 
     // load models
     // -----------
-    Model ourModel(FileSystem::getPath("textures/knife/source/287_Weapon.fbx"));
+    Model ourModel(FileSystem::getPath("textures/honda-civic/2024 Honda Civic Type R.obj"));
 
     // draw in wireframe
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);

@@ -1,28 +1,44 @@
 cmake_minimum_required(VERSION 3.22)
 project(main)
 
+# Set the C++ standard
+set(CMAKE_CXX_STANDARD 20)
+
 # Set source files
 set(SOURCES main.cpp glad.c)
 
-# Create executable
+# Define the executable
 add_executable(main ${SOURCES})
 
-# Find and include GLFW
+# Add libraries
 find_package(glfw3 REQUIRED)
-target_link_libraries(main PRIVATE glfw)
-
-# Find and include Assimp
 find_package(assimp REQUIRED)
-include_directories(${ASSIMP_INCLUDE_DIRS})
-target_link_libraries(main PRIVATE ${ASSIMP_LIBRARIES})
+
+# Add glad.c to GLAD
+add_library(GLAD "glad.c")
+
+# Link libraries (including GLAD)
+target_link_libraries(main PRIVATE glfw assimp GLAD)
+
+# Define the output directory for the executable
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/dist)
+
+# List of DLLs to copy (adjust paths as needed)
+set(DLLS_TO_COPY
+    "C:/msys64/mingw64/bin/libgcc_s_seh-1.dll"
+    "C:/msys64/mingw64/bin/libstdc++-6.dll"
+    "C:/msys64/mingw64/bin/libassimp-5.dll"
+    "C:/msys64/mingw64/bin/glfw3.dll"
+)
+
+# Create a directory for the executable and copy the DLLs
+add_custom_command(TARGET main POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:main>/dlls"
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${DLLS_TO_COPY}
+        "$<TARGET_FILE_DIR:main>/dlls"
+)
 
 # Configure root_directory.h
 configure_file(config/root_directory.h.in ../h/root_directory.h)
 include_directories(${CMAKE_BINARY_DIR}/config)
-
-# Add glad.c to GLAD
-add_library(GLAD "glad.c")
-target_link_libraries(main PRIVATE GLAD)
-
-# Set the output directory for the executable
-set_target_properties(main PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})

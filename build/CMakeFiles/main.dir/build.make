@@ -68,59 +68,61 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/main.cpp.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/main.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
-CMakeFiles/main.dir/main.cpp.obj: C:/Users/Freyja/Documents/GitHub/OpenGL/main.cpp
-CMakeFiles/main.dir/main.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Freyja\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/main.cpp.obj -MF CMakeFiles\main.dir\main.cpp.obj.d -o CMakeFiles\main.dir\main.cpp.obj -c C:\Users\Freyja\Documents\GitHub\OpenGL\main.cpp
+CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/Freyja/Documents/GitHub/OpenGL/src/main.cpp
+CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Freyja\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/main.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cpp.obj -MF CMakeFiles\main.dir\src\main.cpp.obj.d -o CMakeFiles\main.dir\src\main.cpp.obj -c C:\Users\Freyja\Documents\GitHub\OpenGL\src\main.cpp
 
-CMakeFiles/main.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Freyja\Documents\GitHub\OpenGL\main.cpp > CMakeFiles\main.dir\main.cpp.i
+CMakeFiles/main.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Freyja\Documents\GitHub\OpenGL\src\main.cpp > CMakeFiles\main.dir\src\main.cpp.i
 
-CMakeFiles/main.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Freyja\Documents\GitHub\OpenGL\main.cpp -o CMakeFiles\main.dir\main.cpp.s
+CMakeFiles/main.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Freyja\Documents\GitHub\OpenGL\src\main.cpp -o CMakeFiles\main.dir\src\main.cpp.s
 
-CMakeFiles/main.dir/glad.c.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/glad.c.obj: CMakeFiles/main.dir/includes_C.rsp
-CMakeFiles/main.dir/glad.c.obj: C:/Users/Freyja/Documents/GitHub/OpenGL/glad.c
-CMakeFiles/main.dir/glad.c.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Freyja\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/glad.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/glad.c.obj -MF CMakeFiles\main.dir\glad.c.obj.d -o CMakeFiles\main.dir\glad.c.obj -c C:\Users\Freyja\Documents\GitHub\OpenGL\glad.c
+CMakeFiles/main.dir/src/glad.c.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/glad.c.obj: CMakeFiles/main.dir/includes_C.rsp
+CMakeFiles/main.dir/src/glad.c.obj: C:/Users/Freyja/Documents/GitHub/OpenGL/src/glad.c
+CMakeFiles/main.dir/src/glad.c.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Freyja\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/glad.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/src/glad.c.obj -MF CMakeFiles\main.dir\src\glad.c.obj.d -o CMakeFiles\main.dir\src\glad.c.obj -c C:\Users\Freyja\Documents\GitHub\OpenGL\src\glad.c
 
-CMakeFiles/main.dir/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/glad.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Freyja\Documents\GitHub\OpenGL\glad.c > CMakeFiles\main.dir\glad.c.i
+CMakeFiles/main.dir/src/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/src/glad.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Freyja\Documents\GitHub\OpenGL\src\glad.c > CMakeFiles\main.dir\src\glad.c.i
 
-CMakeFiles/main.dir/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/glad.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Freyja\Documents\GitHub\OpenGL\glad.c -o CMakeFiles\main.dir\glad.c.s
+CMakeFiles/main.dir/src/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/src/glad.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Freyja\Documents\GitHub\OpenGL\src\glad.c -o CMakeFiles\main.dir\src\glad.c.s
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/main.cpp.obj" \
-"CMakeFiles/main.dir/glad.c.obj"
+"CMakeFiles/main.dir/src/main.cpp.obj" \
+"CMakeFiles/main.dir/src/glad.c.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main.exe: CMakeFiles/main.dir/main.cpp.obj
-main.exe: CMakeFiles/main.dir/glad.c.obj
-main.exe: CMakeFiles/main.dir/build.make
-main.exe: C:/msys64/mingw64/lib/libglfw3.dll.a
-main.exe: libGLAD.a
-main.exe: CMakeFiles/main.dir/linkLibs.rsp
-main.exe: CMakeFiles/main.dir/objects1.rsp
-main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Freyja\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main.exe"
+bin/main.exe: CMakeFiles/main.dir/src/main.cpp.obj
+bin/main.exe: CMakeFiles/main.dir/src/glad.c.obj
+bin/main.exe: CMakeFiles/main.dir/build.make
+bin/main.exe: C:/msys64/mingw64/lib/libglfw3.dll.a
+bin/main.exe: CMakeFiles/main.dir/linkLibs.rsp
+bin/main.exe: CMakeFiles/main.dir/objects1.rsp
+bin/main.exe: CMakeFiles/main.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Freyja\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin\main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
-	C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/Freyja/Documents/GitHub/OpenGL/build/dlls
-	C:\msys64\mingw64\bin\cmake.exe -E copy_if_different C:/msys64/mingw64/bin/libgcc_s_seh-1.dll C:/msys64/mingw64/bin/libstdc++-6.dll C:/msys64/mingw64/bin/libassimp-5.dll C:/msys64/mingw64/bin/glfw3.dll C:/Users/Freyja/Documents/GitHub/OpenGL/build/dlls
+	C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/
+	C:\msys64\mingw64\bin\cmake.exe -E copy_if_different C:/msys64/mingw64/bin/libgcc_s_seh-1.dll C:/msys64/mingw64/bin/libstdc++-6.dll C:/msys64/mingw64/bin/libassimp-5.dll C:/msys64/mingw64/bin/glfw3.dll C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/
+	C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/shaders
+	C:\msys64\mingw64\bin\cmake.exe -E copy_if_different C:/Users/Freyja/Documents/GitHub/OpenGL/shaders/shader.vert C:/Users/Freyja/Documents/GitHub/OpenGL/shaders/shader.frag C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/shaders/
+	C:\msys64\mingw64\bin\cmake.exe -E copy_directory C:/Users/Freyja/Documents/GitHub/OpenGL/resources C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/resources
 
 # Rule to build all files generated by this target.
-CMakeFiles/main.dir/build: main.exe
+CMakeFiles/main.dir/build: bin/main.exe
 .PHONY : CMakeFiles/main.dir/build
 
 CMakeFiles/main.dir/clean:

@@ -62,6 +62,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "include/h/root_directory.h"
+  "C:/Users/Freyja/Documents/GitHub/OpenGL/include/h/root_directory.h"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

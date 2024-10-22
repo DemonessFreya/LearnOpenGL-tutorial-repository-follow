@@ -224,6 +224,9 @@
 		},
 		{
 			"path" : "config/root_directory.h.in"
+		},
+		{
+			"path" : "config/root_directory.h.in"
 		}
 	],
 	"kind" : "cmakeFiles",

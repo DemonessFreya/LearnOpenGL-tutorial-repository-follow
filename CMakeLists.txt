@@ -67,4 +67,5 @@ add_custom_command(TARGET main POST_BUILD
 
 # Configure root_directory.h
 configure_file(config/root_directory.h.in ${CMAKE_BINARY_DIR}/include/h/root_directory.h)
+configure_file(config/root_directory.h.in ${CMAKE_BINARY_DIR}/../include/h/root_directory.h)
 include_directories(${CMAKE_BINARY_DIR}/include)

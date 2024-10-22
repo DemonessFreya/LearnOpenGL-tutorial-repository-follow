@@ -1,2 +1,1 @@
-// location of source directory
-const char * logl_root = "C:/OpenGL";
+const char * logl_root = "C:/Users/Freyja/Documents/GitHub/OpenGL";

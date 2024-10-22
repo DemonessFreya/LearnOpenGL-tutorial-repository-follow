@@ -1,20 +1,14 @@
 [
 {
   "directory": "C:/Users/Freyja/Documents/GitHub/OpenGL/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/GLAD.dir/includes_C.rsp -g -o CMakeFiles\\GLAD.dir\\glad.c.obj -c C:\\Users\\Freyja\\Documents\\GitHub\\OpenGL\\glad.c",
-  "file": "C:/Users/Freyja/Documents/GitHub/OpenGL/glad.c",
-  "output": "CMakeFiles/GLAD.dir/glad.c.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGLFW_DLL @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c C:\\Users\\Freyja\\Documents\\GitHub\\OpenGL\\src\\main.cpp",
+  "file": "C:/Users/Freyja/Documents/GitHub/OpenGL/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.obj"
 },
 {
   "directory": "C:/Users/Freyja/Documents/GitHub/OpenGL/build",
-  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGLFW_DLL @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\Freyja\\Documents\\GitHub\\OpenGL\\main.cpp",
-  "file": "C:/Users/Freyja/Documents/GitHub/OpenGL/main.cpp",
-  "output": "CMakeFiles/main.dir/main.cpp.obj"
-},
-{
-  "directory": "C:/Users/Freyja/Documents/GitHub/OpenGL/build",
-  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DGLFW_DLL @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\glad.c.obj -c C:\\Users\\Freyja\\Documents\\GitHub\\OpenGL\\glad.c",
-  "file": "C:/Users/Freyja/Documents/GitHub/OpenGL/glad.c",
-  "output": "CMakeFiles/main.dir/glad.c.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DGLFW_DLL @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\glad.c.obj -c C:\\Users\\Freyja\\Documents\\GitHub\\OpenGL\\src\\glad.c",
+  "file": "C:/Users/Freyja/Documents/GitHub/OpenGL/src/glad.c",
+  "output": "CMakeFiles/main.dir/src/glad.c.obj"
 }
 ]

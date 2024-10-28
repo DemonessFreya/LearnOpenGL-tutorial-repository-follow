@@ -25,10 +25,11 @@ target_link_libraries(main PRIVATE glfw assimp)
 
 # List of DLLs to copy (adjust paths as needed)
 set(DLLS_TO_COPY
-    "C:/msys64/mingw64/bin/libgcc_s_seh-1.dll"
-    "C:/msys64/mingw64/bin/libstdc++-6.dll"
-    "C:/msys64/mingw64/bin/libassimp-5.dll"
-    "C:/msys64/mingw64/bin/glfw3.dll"
+    "/usr/lib/libglfw.so.3"
+    "/usr/lib/libassimp.so.5"
+    "/usr/lib/libstdc++.so.6"
+    "/usr/lib/libgcc_s.so.1"
+    "/usr/lib/libz.so.1"
 )
 
 # List of shader files to copy

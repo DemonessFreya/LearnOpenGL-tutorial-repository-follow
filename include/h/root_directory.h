@@ -2,8 +2,8 @@
 #define ROOT_DIRECTORY_H
 
 // Define the root path for resources
-#define ROOT_DIRECTORY "C:/Users/Freyja/Documents/GitHub/OpenGL"
+#define ROOT_DIRECTORY "/home/freyja/Documents/GitHub/OpenGL"
 
-const char * logl_root = "C:/Users/Freyja/Documents/GitHub/OpenGL";
+const char * logl_root = "/home/freyja/Documents/GitHub/OpenGL";
 
 #endif // ROOT_DIRECTORY_H

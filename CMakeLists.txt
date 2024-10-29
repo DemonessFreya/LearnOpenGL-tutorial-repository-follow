@@ -23,12 +23,23 @@ find_package(assimp REQUIRED)
 # Link libraries to the executable
 target_link_libraries(main PRIVATE glfw assimp)
 
+# Set the output directory for the libraries
+set(LIB_OUTPUT_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/lib")
+
+# Set RPATH for the executable
+set_target_properties(main PROPERTIES
+    BUILD_WITH_INSTALL_RPATH TRUE
+    INSTALL_RPATH "${LIB_OUTPUT_DIR}"
+    INSTALL_RPATH_USE_LINK_PATH TRUE
+)
+
 # List of DLLs to copy (adjust paths as needed)
 set(DLLS_TO_COPY
     "C:/msys64/mingw64/bin/libgcc_s_seh-1.dll"
     "C:/msys64/mingw64/bin/libstdc++-6.dll"
     "C:/msys64/mingw64/bin/libassimp-5.dll"
     "C:/msys64/mingw64/bin/glfw3.dll"
+    "C:/msys64/mingw64/bin/libwinpthread-1.dll"
 )
 
 # List of shader files to copy
@@ -44,10 +55,10 @@ set(RESOURCE_DIR_TO_COPY
 
 # Create a directory for the executable and copy the DLLs to the bin/ directory
 add_custom_command(TARGET main POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:main>/"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:main>/lib"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${DLLS_TO_COPY}
-        "$<TARGET_FILE_DIR:main>/"
+        "$<TARGET_FILE_DIR:main>/lib"
 )
 
 # Copy shader files to the bin/ directory

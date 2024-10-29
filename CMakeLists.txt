@@ -10,11 +10,16 @@ set(SOURCES src/main.cpp src/glad.c)
 # Define include directories
 include_directories(include)
 
-# Define the output directory for the executable
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+# Define directories for outputs
+set(BIN_DIR ${CMAKE_BINARY_DIR}/bin)
+set(LIBEXEC_DIR ${BIN_DIR}/libexec)
 
 # Define the executable
 add_executable(main ${SOURCES})
+
+# Set output directory for the main executable only
+set_target_properties(main PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${LIBEXEC_DIR})
 
 # Find and link libraries
 find_package(glfw3 REQUIRED)
@@ -43,27 +48,33 @@ set(RESOURCE_DIR_TO_COPY
     "${CMAKE_SOURCE_DIR}/resources"
 )
 
-# Create a directory for the executable and copy the DLLs to the bin/ directory
+# Create a directory for libraries and copy the DLLs to the bin/lib directory
 add_custom_command(TARGET main POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:main>/"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "${BIN_DIR}/lib"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${DLLS_TO_COPY}
-        "$<TARGET_FILE_DIR:main>/"
+        "${BIN_DIR}/lib"
 )
 
-# Copy shader files to the bin/ directory
+# Copy shader files to the bin/shaders directory
 add_custom_command(TARGET main POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:main>/shaders"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "${BIN_DIR}/shaders"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${SHADERS_TO_COPY}
-        "$<TARGET_FILE_DIR:main>/shaders/"
+        "${BIN_DIR}/shaders/"
 )
 
-# Copy the resources directory to the bin/ directory
+# Copy the resources directory to the bin/resources directory
 add_custom_command(TARGET main POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${RESOURCE_DIR_TO_COPY}
-        "$<TARGET_FILE_DIR:main>/resources"
+        "${BIN_DIR}/resources"
+)
+
+# Configure and copy the run script to bin
+configure_file(src/run_main.sh.in ${BIN_DIR}/run_main.sh @ONLY)
+add_custom_command(TARGET main POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E chmod +x "${BIN_DIR}/run_main.sh"
 )
 
 # Configure root_directory.h

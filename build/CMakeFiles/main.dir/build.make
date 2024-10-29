@@ -115,8 +115,8 @@ bin/main.exe: CMakeFiles/main.dir/objects1.rsp
 bin/main.exe: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Freyja\Documents\GitHub\OpenGL\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin\main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
-	C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/
-	C:\msys64\mingw64\bin\cmake.exe -E copy_if_different C:/msys64/mingw64/bin/libgcc_s_seh-1.dll C:/msys64/mingw64/bin/libstdc++-6.dll C:/msys64/mingw64/bin/libassimp-5.dll C:/msys64/mingw64/bin/glfw3.dll C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/
+	C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/lib
+	C:\msys64\mingw64\bin\cmake.exe -E copy_if_different C:/msys64/mingw64/bin/libgcc_s_seh-1.dll C:/msys64/mingw64/bin/libstdc++-6.dll C:/msys64/mingw64/bin/libassimp-5.dll C:/msys64/mingw64/bin/glfw3.dll C:/msys64/mingw64/bin/libwinpthread-1.dll C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/lib
 	C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/shaders
 	C:\msys64\mingw64\bin\cmake.exe -E copy_if_different C:/Users/Freyja/Documents/GitHub/OpenGL/shaders/shader.vert C:/Users/Freyja/Documents/GitHub/OpenGL/shaders/shader.frag C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/shaders/
 	C:\msys64\mingw64\bin\cmake.exe -E copy_directory C:/Users/Freyja/Documents/GitHub/OpenGL/resources C:/Users/Freyja/Documents/GitHub/OpenGL/build/bin/resources

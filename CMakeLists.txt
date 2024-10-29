@@ -10,16 +10,11 @@ set(SOURCES src/main.cpp src/glad.c)
 # Define include directories
 include_directories(include)
 
-
-# Define directories for outputs
-set(BIN_DIR ${CMAKE_BINARY_DIR}/bin)
-set(LIBEXEC_DIR ${BIN_DIR}/libexec)
+# Define the output directory for the executable
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # Define the executable
 add_executable(main ${SOURCES})
-
-# Set output directory for the main executable only
-set_target_properties(main PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${LIBEXEC_DIR})
 
 # Find and link libraries
 find_package(glfw3 REQUIRED)
@@ -27,6 +22,16 @@ find_package(assimp REQUIRED)
 
 # Link libraries to the executable
 target_link_libraries(main PRIVATE glfw assimp)
+
+# Specify the output directory for the libraries
+set(LIB_OUTPUT_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/lib")
+
+# Set RPATH for the executable
+set_target_properties(main PROPERTIES
+    BUILD_WITH_INSTALL_RPATH TRUE
+    INSTALL_RPATH "${LIB_OUTPUT_DIR}"
+    INSTALL_RPATH_USE_LINK_PATH TRUE
+)
 
 # List of DLLs to copy (adjust paths as needed)
 set(DLLS_TO_COPY
@@ -48,33 +53,27 @@ set(RESOURCE_DIR_TO_COPY
     "${CMAKE_SOURCE_DIR}/resources"
 )
 
-# Create a directory for libraries and copy the DLLs to the bin/lib directory
+# Create a directory for the executable and copy the DLLs to the bin/ directory
 add_custom_command(TARGET main POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory "${BIN_DIR}/lib"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:main>/lib"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${DLLS_TO_COPY}
-        "${BIN_DIR}/lib"
+        "$<TARGET_FILE_DIR:main>/lib"
 )
 
-# Copy shader files to the bin/shaders directory
+# Copy shader files to the bin/ directory
 add_custom_command(TARGET main POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory "${BIN_DIR}/shaders"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:main>/shaders"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         ${SHADERS_TO_COPY}
-        "${BIN_DIR}/shaders/"
+        "$<TARGET_FILE_DIR:main>/shaders/"
 )
 
-# Copy the resources directory to the bin/resources directory
+# Copy the resources directory to the bin/ directory
 add_custom_command(TARGET main POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${RESOURCE_DIR_TO_COPY}
-        "${BIN_DIR}/resources"
-)
-
-# Configure and copy the run script to bin
-configure_file(src/run_main.sh.in ${BIN_DIR}/run_main.sh @ONLY)
-add_custom_command(TARGET main POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E chmod +x "${BIN_DIR}/run_main.sh"
+        "$<TARGET_FILE_DIR:main>/resources"
 )
 
 # Configure root_directory.h

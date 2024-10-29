@@ -1,5 +1,0 @@
-# ninja log v6
-3	476	1730204871894042720	CMakeFiles/main.dir/src/glad.c.o	5fcedd4324a362eb
-2	4327	1730204871894042720	CMakeFiles/main.dir/src/main.cpp.o	ffaffdcd7288bf6a
-2	443	1730205392254084224	bin/main	75dab426c2aad9b2
-9	411	1730205656422764921	bin/main	c6def5542dc9988

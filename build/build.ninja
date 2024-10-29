@@ -73,7 +73,7 @@ build CMakeFiles/main.dir/src/glad.c.o: C_COMPILER__main_unscanned_Debug /home/f
 
 build bin/main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/glad.c.o | /usr/lib/libglfw.so.3.4
   FLAGS = -g
-  LINK_LIBRARIES = -Wl,-rpath,/home/freyja/Documents/GitHub/OpenGL/build/bin/lib  /usr/lib/libglfw.so.3.4  -lassimp
+  LINK_LIBRARIES = -Wl,-rpath,"\$$ORIGIN/lib"  /usr/lib/libglfw.so.3.4  -lassimp
   OBJECT_DIR = CMakeFiles/main.dir
   POST_BUILD = cd /home/freyja/Documents/GitHub/OpenGL/build && /usr/bin/cmake -E make_directory /home/freyja/Documents/GitHub/OpenGL/build/bin/lib && /usr/bin/cmake -E copy_if_different /usr/lib/libglfw.so.3 /usr/lib/libassimp.so.5 /usr/lib/libstdc++.so.6 /usr/lib/libgcc_s.so.1 /usr/lib/libz.so.1 /home/freyja/Documents/GitHub/OpenGL/build/bin/lib && cd /home/freyja/Documents/GitHub/OpenGL/build && /usr/bin/cmake -E make_directory /home/freyja/Documents/GitHub/OpenGL/build/bin/shaders && /usr/bin/cmake -E copy_if_different /home/freyja/Documents/GitHub/OpenGL/shaders/shader.vert /home/freyja/Documents/GitHub/OpenGL/shaders/shader.frag /home/freyja/Documents/GitHub/OpenGL/build/bin/shaders/ && cd /home/freyja/Documents/GitHub/OpenGL/build && /usr/bin/cmake -E copy_directory /home/freyja/Documents/GitHub/OpenGL/resources /home/freyja/Documents/GitHub/OpenGL/build/bin/resources
   PRE_LINK = :

@@ -23,16 +23,6 @@ find_package(assimp REQUIRED)
 # Link libraries to the executable
 target_link_libraries(main PRIVATE glfw assimp)
 
-# Specify the output directory for the libraries
-set(LIB_OUTPUT_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/lib")
-
-# Set RPATH for the executable
-set_target_properties(main PROPERTIES
-    BUILD_WITH_INSTALL_RPATH TRUE
-    INSTALL_RPATH "${LIB_OUTPUT_DIR}"
-    INSTALL_RPATH_USE_LINK_PATH TRUE
-)
-
 # List of DLLs to copy (adjust paths as needed)
 set(DLLS_TO_COPY
     "/usr/lib/libglfw.so.3"
@@ -75,6 +65,15 @@ add_custom_command(TARGET main POST_BUILD
         ${RESOURCE_DIR_TO_COPY}
         "$<TARGET_FILE_DIR:main>/resources"
 )
+
+# Set RPATH for the executable
+set_target_properties(main PROPERTIES
+    BUILD_WITH_INSTALL_RPATH TRUE
+    INSTALL_RPATH "$ORIGIN/lib"
+    INSTALL_RPATH_USE_LINK_PATH TRUE
+)
+
+set(CMAKE_BUILD_RPATH "$ORIGIN/lib")
 
 # Configure root_directory.h
 configure_file(config/root_directory.h.in ${CMAKE_BINARY_DIR}/include/h/root_directory.h)

@@ -1,6 +1,6 @@
 # OpenGL Project
 
-![License](https://img.shields.io/github/license/DemonessFreya/OpenGL)
+![License](https://img.shields.io/github/license/DemonessFreya/OpenGL?label=License&logo=github&color=blue)
 ![Issues](https://img.shields.io/github/issues/DemonessFreya/OpenGL)
 ![Stars](https://img.shields.io/github/stars/DemonessFreya/OpenGL)
 

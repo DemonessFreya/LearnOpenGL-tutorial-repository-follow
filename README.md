@@ -1,5 +1,36 @@
-OpenGL project following https://LearnOpenGL.com
+# OpenGL Project
 
-![Nations Screenshot 2024 10 11 - 23 45 47 60](https://github.com/user-attachments/assets/38456b3b-3835-4335-bca1-29653adfced7)
+![License](https://img.shields.io/github/license/DemonessFreya/OpenGL)
+![Issues](https://img.shields.io/github/issues/DemonessFreya/OpenGL)
+![Stars](https://img.shields.io/github/stars/DemonessFreya/OpenGL)
 
-**check release-branch for current releases**
+## Description
+
+This project is my exploration of OpenGL, developed while following the tutorials on [LearnOpenGL.com](https://learnopengl.com/). It includes examples, custom shaders, model loading with textures, and rendering techniques, up to the model loading chapter. You can use this if you would like to see someone else's solution to the model subchapter.
+
+## Features
+
+- Basic OpenGL setup
+- Model loading and rendering with textures
+- Lighting and shading effects
+- Handling models from various formats (.obj, .fbx, .gltf)
+- Examples of using shaders and other advanced OpenGL techniques
+- OS builds split into two directories (arch and win32)
+
+## Contributing
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **C++ Compiler** (MSYS2 MinGW64 recommended)
+- **CMake** for building the project
+- **OpenGL Libraries** (GLFW, GLAD, glm, Assimp, etc.)
+
+### Installation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/DemonessFreya/OpenGL.git
+cd OpenGL

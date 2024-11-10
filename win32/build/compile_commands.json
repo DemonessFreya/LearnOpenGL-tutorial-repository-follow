@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/Freyja/OneDrive/Documents/GitHub/OpenGL/win32/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGLFW_DLL @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c C:\\Users\\Freyja\\OneDrive\\Documents\\GitHub\\OpenGL\\win32\\src\\main.cpp",
+  "file": "C:/Users/Freyja/OneDrive/Documents/GitHub/OpenGL/win32/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Freyja/OneDrive/Documents/GitHub/OpenGL/win32/build",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe -DGLFW_DLL @CMakeFiles/main.dir/includes_C.rsp -g -o CMakeFiles\\main.dir\\src\\glad.c.obj -c C:\\Users\\Freyja\\OneDrive\\Documents\\GitHub\\OpenGL\\win32\\src\\glad.c",
+  "file": "C:/Users/Freyja/OneDrive/Documents/GitHub/OpenGL/win32/src/glad.c",
+  "output": "CMakeFiles/main.dir/src/glad.c.obj"
+}
+]

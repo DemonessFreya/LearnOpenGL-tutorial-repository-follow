@@ -1,0 +1,3 @@
+C:/Users/Freyja/OneDrive/Documents/GitHub/OpenGL/win32/build/CMakeFiles/main.dir
+C:/Users/Freyja/OneDrive/Documents/GitHub/OpenGL/win32/build/CMakeFiles/edit_cache.dir
+C:/Users/Freyja/OneDrive/Documents/GitHub/OpenGL/win32/build/CMakeFiles/rebuild_cache.dir

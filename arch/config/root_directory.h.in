@@ -1,9 +1,0 @@
-#ifndef ROOT_DIRECTORY_H
-#define ROOT_DIRECTORY_H
-
-// Define the root path for resources
-#define ROOT_DIRECTORY "@CMAKE_CURRENT_SOURCE_DIR@"
-
-const char * logl_root = "${CMAKE_SOURCE_DIR}";
-
-#endif // ROOT_DIRECTORY_H

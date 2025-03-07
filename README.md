@@ -6,15 +6,10 @@
 
 ## Description
 
-This project is my exploration of OpenGL, developed while following the tutorials on [LearnOpenGL.com](https://learnopengl.com/). It includes examples, custom shaders, model loading with textures, and rendering techniques, up to the model loading chapter. You can use this if you would like to see someone else's solution to the model subchapter.
+This project is my exploration of OpenGL, developed while following the tutorials on [LearnOpenGL.com](https://learnopengl.com/). It includes examples; the tutorial's: custom shaders, model loading with textures, and rendering techniques; up to the model loading chapter. You can use this if you would like to see someone else's solution to the model subchapter. It is unlikely that I will return to this project to complete the website's tutorial as I have moved on to using Vulkan as my standard.
 
 ## Features
 
-- Basic OpenGL setup
-- Model loading and rendering with textures
-- Lighting and shading effects
-- Handling models from various formats (.obj, .fbx, .gltf)
-- Examples of using shaders and other advanced OpenGL techniques
 - OS builds split into two directories (arch and win32)
 
 ## Contributing
